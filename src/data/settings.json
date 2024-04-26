@@ -1,0 +1,8 @@
+{
+  "initialOption": {
+    "path1": "var/www/vhosts",
+    "path2": "httpdocs",
+    "domainName": "example.com"
+  },
+  "initialList": []
+}

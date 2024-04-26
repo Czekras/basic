@@ -1,0 +1,331 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url("/src/font/NotoSansJP-VariableFont_wght.ttf");
+  font-weight: 400 700;
+}
+/* -------------------------------------------------------------------------- */
+/*                                  Variables                                 */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                    Base                                    */
+/* -------------------------------------------------------------------------- */
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #464646;
+  background-color: #ffffff;
+  font-size: clamp(12px, 1.5vw, 14px);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+.pc-none {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.cmn-py {
+  padding-block: 20px;
+}
+
+.cmn-mb {
+  margin-bottom: 10px;
+}
+
+.mb-4 {
+  margin-bottom: 4px;
+}
+
+a {
+  color: inherit;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.input-text label {
+  color: #adadad;
+  display: block;
+  margin-bottom: 5px;
+}
+.input-text input {
+  border: none;
+  outline: none;
+  border: 1px solid #e0e0e0;
+  background-color: #ffffff;
+  padding-inline: 5px;
+  width: 100%;
+}
+.input-text input::placeholder {
+  color: #adadad;
+}
+.input-text--full {
+  width: 100%;
+}
+.input-text--full input {
+  width: 100%;
+}
+.input-text--option {
+  margin-top: 5px;
+}
+
+.button-icon {
+  all: unset;
+  transition: all 0.3s;
+}
+.button-icon:hover {
+  color: #464646;
+  cursor: pointer;
+}
+.button-icon--delete:hover {
+  color: #e06c75;
+}
+.button-icon--small {
+  font-size: 16px;
+}
+.button-icon:disabled:hover {
+  cursor: default;
+}
+
+.side-note {
+  color: #adadad;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.side-note--btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row nowrap;
+}
+
+.cmn-button {
+  width: 100%;
+  transition: all 0.3s;
+  background-color: #f0f0f0;
+  border-radius: 3px;
+  padding-block: 3px;
+  border: none;
+  font-family: "Noto Sans JP", sans-serif;
+}
+.cmn-button:hover {
+  cursor: pointer;
+  background-color: #dfdfdf;
+}
+.cmn-button:not(:last-child) {
+  margin-bottom: 7px;
+}
+.cmn-button:disabled {
+  background-color: #f0f0f0;
+}
+.cmn-button:disabled:hover {
+  cursor: auto;
+}
+.cmn-button--dark {
+  background-color: #e2e2e2;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    Main                                    */
+/* -------------------------------------------------------------------------- */
+.main {
+  width: min(100%, 1080px);
+  margin-inline: auto;
+  padding-inline: 15px;
+  background-color: #ffffff;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.main > * {
+  padding-block: 73px 45px;
+  overflow: auto;
+}
+.main__wrapper {
+  width: 100%;
+  padding-block: 73px 45px;
+  border-inline: 1px solid #e0e0e0;
+}
+.main .dvh100 {
+  height: 100dvh;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   Header                                   */
+/* -------------------------------------------------------------------------- */
+.header {
+  background-color: #ffffff;
+  position: fixed;
+  inset: 0 0 auto 0;
+  padding-block: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  z-index: 100;
+  font-size: 14px;
+  z-index: 100;
+}
+.header__wrapper {
+  padding-inline: calc(50% - 540px);
+  margin-inline: 15px;
+}
+.header__logo {
+  width: fit-content;
+  display: block;
+}
+.header__title {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   Setting                                  */
+/* -------------------------------------------------------------------------- */
+.setting__wrapper {
+  padding: 20px;
+  border-bottom: 1px dashed #e0e0e0;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    Form                                    */
+/* -------------------------------------------------------------------------- */
+.form__item label {
+  margin-right: 5px;
+}
+.form__item input {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  outline: none;
+  padding-inline: 5px;
+}
+.form__item input::placeholder {
+  color: #adadad;
+}
+.form__item--row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: row nowrap;
+}
+.form--setting, .form__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+  gap: 15px;
+}
+.form__button {
+  margin-inline: 30px 0;
+}
+.form__button button {
+  transition: all 0.3s;
+  background-color: #f0f0f0;
+  border-radius: 3px;
+  padding: 3px 30px;
+  width: 120px;
+  border: none;
+  font-family: "Noto Sans JP", sans-serif;
+}
+.form__button button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+.form__button--small {
+  margin-inline: 10px auto;
+}
+.form__button--small button {
+  padding: 3px 10px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   Control                                  */
+/* -------------------------------------------------------------------------- */
+.control {
+  border-bottom: 1px solid #e0e0e0;
+}
+.control__note {
+  color: #adadad;
+}
+.control table {
+  width: 100%;
+  padding: 5px 10px;
+  text-align: left;
+  border-collapse: separate;
+  background-color: #f9f9f9;
+}
+.control table thead {
+  font-size: 13px;
+}
+.control table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+/* -------------------------------------------------------------------------- */
+/*                                   Output                                   */
+/* -------------------------------------------------------------------------- */
+.output__wrapper {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: column nowrap;
+  gap: 20px;
+}
+.output__item {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+}
+.output__item header {
+  padding: 7px;
+  border-bottom: 1px dashed #e0e0e0;
+}
+.output__item header h2 {
+  font-size: 1.17em;
+}
+.output__item header small {
+  color: #adadad;
+}
+.output__item-code pre {
+  margin-block: 0;
+}
+.output__item-code code {
+  font-family: "游ゴシック", "YuGothic", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   Footer                                   */
+/* -------------------------------------------------------------------------- */
+.footer {
+  background-color: #ffffff;
+  position: fixed;
+  inset: auto 0 0 0;
+  padding-block: 4px;
+  text-align: center;
+  border-top: 1px solid #e0e0e0;
+  z-index: 100;
+}
+.footer small {
+  margin-inline: 15px;
+  white-space: nowrap;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   Others                                   */
+/* -------------------------------------------------------------------------- */
+.hidden {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-inline: auto;
+}
+.hidden h2 {
+  margin-bottom: 5px;
+}
+
+/* ---------------------------------- Icons --------------------------------- */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+}
