@@ -1,6 +1,6 @@
-## Framework
+## Basic Auth.
 
-My application template.
+Code generator for Basic Authentication.
 
 ### dev/Dependencies
 
